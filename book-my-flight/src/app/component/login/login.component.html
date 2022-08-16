@@ -1,9 +1,9 @@
 <h2>Welcome!</h2>
 <h3>Please Sign In:</h3>
 <form (submit)="onFormSubmit()" [formGroup]="loginForm">
-    <input type="text" name="username" formControlName="username">
+    Username: <input type="text" name="username" formControlName="username">
     <br />
-    <input type="password" name="password" formControlName="password">
+    Password: <input type="password" name="password" formControlName="password">
     <br />
     <div>Are you a:</div>
     <input type="radio" id="customer" name="role" value="customer" formControlName="role">

@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { GenerateFlightComponent } from './component/generate-flight/generate-flight.component';
 import { SearchFlightComponent } from './component/search-flight/search-flight.component';
+import { BookedFlightComponent } from './component/booked-flight/booked-flight.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     GenerateFlightComponent,
-    SearchFlightComponent
+    SearchFlightComponent,
+    BookedFlightComponent
   ],
   imports: [
     BrowserModule,

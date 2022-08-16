@@ -35,8 +35,10 @@ export class LoginComponent implements OnInit {
         this.loginService.loginAsCustomer(this.username,this.password).subscribe({
           next : (data)=>{
               localStorage.setItem('username',data.username);
+              localStorage.setItem('firstName',data.firstName);
+              localStorage.setItem('lastNmae',data.lastName);
               localStorage.setItem('role',this.role);
-              this.router.navigateByUrl('/generate');
+              this.router.navigateByUrl('/search');
           },
           error: (e)=> { }
         });
@@ -45,8 +47,9 @@ export class LoginComponent implements OnInit {
         this.loginService.loginAsVendor(this.username,this.password).subscribe({
           next : (data)=>{
               localStorage.setItem('username',data.username);
+              localStorage.setItem('name',data.name);
               localStorage.setItem('role',this.role);
-              this.router.navigateByUrl('/search');
+              this.router.navigateByUrl('/generate');
           },
           error: (e)=> { }
         });

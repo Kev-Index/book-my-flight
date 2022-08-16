@@ -1,1 +1,24 @@
-<p>generate-flight works!</p>
+<h2>Welcome {{this.name}}</h2>
+<br /><br />
+<form (submit)="onFormSubmit()" [formGroup]="generateFlightForm">
+    From/Source: <input type="text" name="source" formControlName="source">
+    <br />
+    To/Destination: <input type="text" name="source" formControlName="source">
+    <br />
+
+    Departure Time: <input type="text" name="source" formControlName="source">
+    <br />
+
+    Arrival Time: <input type="text" name="source" formControlName="source">
+    <br />
+    Journey Duration: <input type="text" name="source" formControlName="source"> hours 
+    <input type="text" name="source" formControlName="source"> minutes
+    <br />
+    Fare/Adult: <input type="text" name="source" formControlName="source">
+    <br />
+    Fare/Child: <input type="text" name="source" formControlName="source">
+    <br />
+    Total Seats: <input type="text" name="source" formControlName="source">
+    <br /><br />
+    <input type="submit" value="PostFlight" [disabled]="!generateFlightForm.valid">
+</form>

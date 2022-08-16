@@ -1,1 +1,10 @@
-<p>search-flight works!</p>
+<form (submit)="onFormSubmit()" [formGroup]="searchFlightForm">
+    From: <input type="text" name="source" formControlName="source">
+    <br />
+    To: <input type="text" name="destination" formControlName="destination">
+    <br />
+    DepartureDate: <input type="date" name="departureDate" formControlName="departureDate">
+    <br /><br />
+    <input type="submit" value="Search Flights" [disabled]="!searchFlightForm.valid">
+</form>
+   

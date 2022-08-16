@@ -15,12 +15,13 @@ export class LoginService {
 
   constructor(private http: HttpClient) {
     this.loginAsVendorApi = environment.serverUrl + 'vendor/';
-    this.  loginAsCustomerApi = environment.serverUrl + 'customer/';
+    this.loginAsCustomerApi = environment.serverUrl + 'customer/';
   }
 
   loginAsVendor(username: string, password: string):Observable<Vendor> {
     return this.http.get<Vendor>(this.loginAsVendorApi+username+"/"+password);
   }
+  
   loginAsCustomer(username: string, password: string):Observable<Customer> {
     return this.http.get<Customer>(this.loginAsCustomerApi+username+"/"+password);
   }
