@@ -3,22 +3,24 @@
 <form (submit)="onFormSubmit()" [formGroup]="generateFlightForm">
     From/Source: <input type="text" name="source" formControlName="source">
     <br />
-    To/Destination: <input type="text" name="source" formControlName="source">
+    To/Destination: <input type="text" name="destination" formControlName="destination">
     <br />
-
-    Departure Time: <input type="text" name="source" formControlName="source">
+    Departure Date: <input type="date" name="departureDate" formControlName="departureDate">
     <br />
-
-    Arrival Time: <input type="text" name="source" formControlName="source">
+    Departure Time: <input type="time" name="departureTime" formControlName="departureTime">
     <br />
-    Journey Duration: <input type="text" name="source" formControlName="source"> hours 
-    <input type="text" name="source" formControlName="source"> minutes
+    Arrival Date: <input type="date" name="arrivalDate" formControlName="arrivalDate">
     <br />
-    Fare/Adult: <input type="text" name="source" formControlName="source">
+    Arrival Time: <input type="time" name="arrivalTime" formControlName="arrivalTime">
     <br />
-    Fare/Child: <input type="text" name="source" formControlName="source">
+    Journey Duration: <input type="text" name="journeyDurationHours" formControlName="journeyDurationHours"> hours 
+    <input type="text" name="journeyDurationMinutes" formControlName="journeyDurationMinutes"> minutes
     <br />
-    Total Seats: <input type="text" name="source" formControlName="source">
+    Fare/Adult: <input type="text" name="adultFare" formControlName="adultFare">
+    <br />
+    Fare/Child: <input type="text" name="childFare" formControlName="childFare">
+    <br />
+    Total Seats: <input type="text" name="totalSeats" formControlName="totalSeats">
     <br /><br />
-    <input type="submit" value="PostFlight" [disabled]="!generateFlightForm.valid">
+    <input type="submit" value="Post Flight" [disabled]="!generateFlightForm.valid">
 </form>
